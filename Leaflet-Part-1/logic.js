@@ -4,7 +4,7 @@ let queryUrl = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/signif
 
 // "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_month.geojson";
 
-// Perform a GET request to the query URL/
+// Perform a GET request to the query URL
 d3.json(queryUrl).then(function (data) {
   // Once we get a response, send the data.features object to the createFeatures function.
   createFeatures(data.features);
@@ -54,7 +54,7 @@ d3.json(queryUrl).then(function (data) {
       onEachFeature: onEachFeature,
     });
 
-    // Send our earthquakes layer to the createMap function/
+    // Send our earthquakes layer to the createMap function.
     createMap(earthquakes);
   }
 
